@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+          width: 100%;
+          height: 200px;
+          border: 2px solid black;
+          background-color: cyan;
+      }
+      #demo{
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div onmousemove="mostrarCoordenadas(event)"></div>
+    <h3><span id="demo"></span></h3>
+    <script>
+    function mostrarCoordenadas(puntero) {
+        var x = event.clientX;
+        var y = event.clientY;
+        var coor = "Coordenadas: (" + x + "x," + y + "y)";
+        document.getElementById("demo").innerHTML = coor;
+    }
+    </script>
+  </body>
+</html>

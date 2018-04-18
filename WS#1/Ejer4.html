@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <style>
+      #demo{
+        height: 770px;
+      }
+      table{
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo" onmousemove="cambiarColor(event)"></div>
+    <script language="javascript" type="text/javascript">
+      function hacerTabla(){
+        var tabla = "<table border='1' cellpadding='0' cellspacing='0'>";
+        for (var i=0; i < 100; i++){
+            tabla += "<tr>";
+            for(var j=0; j<100; j++) {
+                tabla+= "<td id='celda'>"+""+"</td>";
+            }
+            tabla+= "</tr>";
+        }
+        tabla+="</table>";
+        document.getElementById("demo").innerHTML = tabla;
+      }
+      function cambiarColor(e){
+        if (event.ctrlKey) {
+          event.target.style.backgroundColor="#FF0000";
+        } else if(event.shiftKey){
+          event.target.style.backgroundColor="#0000FF";
+        }
+      }
+       window.onload = hacerTabla;
+    </script>
+  </body>
+</html>
