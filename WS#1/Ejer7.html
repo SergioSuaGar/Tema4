@@ -1,0 +1,44 @@
+
+<html>
+  <body>
+    <h2>Rellene el siguiente formulario</h2>
+    <form id="formulario">
+      <p>Nombre: </p>
+      <input type="text" id="nombreInput" value=""></br>
+      <p>Correo: </p>
+      <input type="text" id="correoInput" value=""></br>
+      <p>Comentario: </p>
+      <input type="text" id="comentarioInput" value="">
+    </form>
+    <script>
+      var x = document.getElementById("nombreInput");
+      x.addEventListener("focus", focusNombre, true);
+      x.addEventListener("blur", blurNombre, true);
+      var y = document.getElementById("correoInput");
+      y.addEventListener("focus", focusCorreo, true);
+      y.addEventListener("blur", blurCorreo, true);
+      var z = document.getElementById("comentarioInput");
+      z.addEventListener("focus", focusComentario, true);
+      z.addEventListener("blur", blurComentario, true);
+
+      function focusNombre() {
+          document.getElementById("nombreInput").value="Escribe tu nombre aqui";
+      }
+      function blurNombre() {
+          document.getElementById("nombreInput").value="";
+      }
+      function focusCorreo() {
+          document.getElementById("correoInput").value="Escribe tu correo aqui";
+      }
+      function blurCorreo() {
+          document.getElementById("correoInput").value="";
+      }
+      function focusComentario() {
+          document.getElementById("comentarioInput").value="Escribe tu comentario aqui";
+      }
+      function blurComentario() {
+          document.getElementById("comentarioInput").value="";
+      }
+    </script>
+  </body>
+</html>
