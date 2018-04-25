@@ -4,50 +4,30 @@
   </head>
   <body>
     <form>
-      <fieldset>
-        <fieldset>
-            <label>
-                <b>Nombre - </b>
-                <input type="text" id="nombre" onfocusout="validarnombre()">
-            </label>
-        </fieldset>
-
-        <fieldset>
-            <label>
-                <b>Apellido - </b>
-                <input type="text" id="apellido" onfocusout="validarapellido()">
-            </label>
-        </fieldset>
-
-
-        <fieldset>
-            <label>
-                <b>DNI - </b>
-                <input type="text" id="dni" onfocusout="validardni()">
-            </label>
-        </fieldset>
-
-        <fieldset>
-            <label>
-                <b>Teléfono - </b>
-                <input type="number" id="telefono" onfocusout="validartelefono()">
-            </label>
-        </fieldset>
-
-        <fieldset>
-            <label>
-                <b>Email - </b>
-                <input type="text" id="email" onfocusout="validaremail()">
-            </label>
-        </fieldset>
-
-        <fieldset>
-            <label>
-                <b>Usuario - </b>
-                <input type="text" id="usuario" onfocusout="validarusuario()">
-            </label>
-        </fieldset>
-      </fieldset>
+        <label>
+            <b>Nombre</b>
+            <input type="text" id="nombre" onfocusout="validarnombre()"></br></br>
+        </label>
+        <label>
+            <b>Apellido</b>
+            <input type="text" id="apellido" onfocusout="validarapellido()"></br></br>
+        </label>
+        <label>
+            <b>DNI</b>
+            <input type="text" id="dni" onfocusout="validardni()"></br></br>
+        </label>
+        <label>
+            <b>Teléfono</b>
+            <input type="number" id="telefono" onfocusout="validartelefono()"></br></br>
+        </label>
+        <label>
+            <b>Email</b>
+            <input type="text" id="email" onfocusout="validaremail()"></br></br>
+        </label>
+        <label>
+            <b>Usuario</b>
+            <input type="text" id="usuario" onfocusout="validarusuario()"></br></br>
+        </label>
     </form>
     <script>
       function validarnombre() {
@@ -88,7 +68,7 @@
 
       function validaremail(){
         var email = document.getElementById("email").value;
-        var expemail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/
+        var expemail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
         if (expemail.test(email)) {
           document.getElementById("email").style.backgroundColor="#b5f195"
           console.log(email);
